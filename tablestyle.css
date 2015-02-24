@@ -3,11 +3,11 @@ table {
       border-style: solid;
       cellspacing: 1;
     }
-    td {
+td {
       text-align: center;
       border-style: solid;
       cellspacing: 1;
     }
-    .library {
+.library {
       background-color: yellow;
     }
