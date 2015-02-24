@@ -2,6 +2,7 @@ table {
       width: 100%;
       border-style: solid;
       cellspacing: 1;
+      font-family: fantasy;
     }
 td {
       text-align: center;
