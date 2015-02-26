@@ -3,6 +3,7 @@ table {
       border-style: dotted;
       cellspacing: 1;
       font-family: fantasy;
+      border-color: yellow;
     }
 td {
       text-align: center;
