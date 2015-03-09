@@ -4,21 +4,21 @@
     </head>
     <body>
           <label for="slidera">Height (in inches)</label>
-          <input type="range" min=0 max=96 id="theboxa" onmousemove="hello();" value=0>
+          <input type="range" min=0 max=96 id="slidera" onmousemove="hello();" value=0>
           <label for="sliderb">Weight (in pounds)</label>
-          <input type="range" min=0 max=400 id="theboxb" onmousemove="hello();" value=0>
+          <input type="range" min=0 max=400 id="sliderb" onmousemove="hello();" value=0>
         <h1 id="heightoutput">Height: 0</h1>
         <h1 id="weightoutput">Weight: 0</h1>
         <h1 id="output"></h1>
         
         <script>
             hello=function() {
-                theboxa = document.querySelector("#theboxa");
-                height = theboxa.value;
-                theboxb = document.querySelector("#theboxb");
-                weight = theboxb.value;
-                heighth1 = document.querySelector("heightoutput");
-                weighth1 = document.querySelector("weightoutput");
+                slidera = document.querySelector("#slidera");
+                height = slidera.value;
+                sliderb = document.querySelector("#sliderb");
+                weight = sliderb.value;
+                heighth1 = document.querySelector("#heightoutput");
+                weighth1 = document.querySelector("#weightoutput");
                 theh1 = document.querySelector("#output");
                 heighth1.innerHTML="Height: " + height;
                 weighth1.innerHTML="Weight: " + weight;
