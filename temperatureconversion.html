@@ -5,14 +5,17 @@
 <body>
     <label for="slider">Temperature in Celsius</label>
     <input type="range" min=-273 max=273 id="theslider" onmousemove="hello();" value=0>
-    <h1 id="output"></h1>
+    <h1 id="outputc"></h1>
+    <h1 id="outputf"></h1>
         
     <script>
         hello=function() {
             theslider = document.querySelector("#theslider");
             temperature = theslider.value;
-            theh1 = document.querySelector("#output");
-            theh1.innerHTML = temperature*1.8+32 + " Degrees Fahrenheit"
+            theh1c = document.querySelector("#outputc");
+            theh1c.innerHTML = "Degrees C: " + temperature;
+            theh1f = document.querySelector("#outputf");
+            theh1f.innerHTML = temperature*1.8+32 + " Degrees Fahrenheit"
         }
     </script>
 
