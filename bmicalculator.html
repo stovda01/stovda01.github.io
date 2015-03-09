@@ -3,11 +3,10 @@
         <title>BMI Calculator</title>
     </head>
     <body>
-          <label for="theboxa">Height (in inches)</label>
-          <input type="range" id="theboxa">
-          <label for="theboxb">Weight (in pounds)</label>
-          <input type="range" id="theboxb">
-        <button onclick="hello();">Calculate BMI</button>
+          <label for="slidera">Height (in inches)</label>
+          <input type="range" min=0 max=96 id="theboxa" onmousemove="hello();" value=0>
+          <label for="sliderb">Weight (in pounds)</label>
+          <input type="range" min=0 max=400 id="theboxb" onmousemove="hello();" value=0>
         <h1 id="heightoutput"></h1>
         <h1 id="weightoutput"></h1>
         <h1 id="output"></h1>
@@ -21,6 +20,8 @@
                 heighth1 = document.querySelector("heightoutput");
                 weighth1 = document.querySelector("weightoutput");
                 theh1 = document.querySelector("#output");
+                heighth1.innerHTML="Your height is " + height;
+                weighth1.innerHTML="Your weight is " + weight;
                 theh1.innerHTML = "Your BMI is " + (weight*703)/(height*height);
             }
         </script>
