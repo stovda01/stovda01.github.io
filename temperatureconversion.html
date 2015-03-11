@@ -26,14 +26,17 @@
             if (theh1f>100) {
               themessage=document.querySelector("#themessage");
               themessage.innerHTML="TOO HOT";
+              document.body.style.backgroundColor="red";
             }
             if (theh1f<20) {
               themessage=document.querySelector("#themessage");
               themessage.innerHTML="TOO COLD";
+              document.body.style.backgroundColor="aqua";
             }
             if (theh1f>=20 && theh1f<=100) {
               themessage=document.querySelector("#themessage");
               themessage.innerHTML="OK";
+              document.body.style.backgroundColor="yello";
             }
         }
     </script>
