@@ -31,18 +31,19 @@
                 theh1 = document.querySelector("#output");
                 heighth1.innerHTML="Height: " + height;
                 weighth1.innerHTML="Weight: " + weight;
-                theh1.innerHTML = "Your BMI is " + (weight*703)/(height*height);
-            if ((weight*703)/(height*height)>24) {
+                bmi = (weight*703)/(height*height);
+                theh1.innerHTML = "Your BMI is " + bmi;
+            if (bmi>24) {
               themessage=document.querySelector("#themessage");
               themessage.innerHTML="High";
               document.body.style.backgroundColor="red";
             }
-            if ((weight*703)/(height*height)<19) {
+            if (bmi<19) {
               themessage=document.querySelector("#themessage");
               themessage.innerHTML="Low";
               document.body.style.backgroundColor="aqua";
             }
-            if ((weight*703)/(height*height)>=19 && (weight*703)/(height*height)<=24) {
+            if (bmi>=19 && bmi<=24) {
               themessage=document.querySelector("#themessage");
               themessage.innerHTML="OK";
               document.body.style.backgroundColor="yellow";
