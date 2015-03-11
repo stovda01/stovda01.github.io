@@ -22,9 +22,10 @@
             theh1c.innerHTML = "Degrees C: " + temperature;
             theh1f = document.querySelector("#outputf");
             theh1f.innerHTML = "Degrees F: " + (temperature*1.8+32);
+            
             if (theh1f>100) {
               themessage=document.querySelector("#themessage");
-              message.innerHTML="TOO HOT";
+              themessage.innerHTML="TOO HOT";
             }
         }
     </script>
