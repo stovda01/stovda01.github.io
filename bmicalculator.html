@@ -32,7 +32,6 @@
                 heighth1.innerHTML="Height: " + height;
                 weighth1.innerHTML="Weight: " + weight;
                 theh1.innerHTML = "Your BMI is " + (weight*703)/(height*height);
-            }
             if ((weight*703)/(height*height)>24) {
               themessage=document.querySelector("#themessage");
               themessage.innerHTML="High";
@@ -47,6 +46,7 @@
               themessage=document.querySelector("#themessage");
               themessage.innerHTML="OK";
               document.body.style.backgroundColor="yellow";
+            }
             }
         </script>
         
