@@ -12,6 +12,7 @@
     <input type="range" min=-273 max=273 id="theslider" onmousemove="hello();" value=0>
     <h1 id="outputc">Degrees C: 0</h1>
     <h1 id="outputf">Degrees F: 32</h1>
+    <h1 id="themessage"></h1>
         
     <script>
         hello=function() {
@@ -21,6 +22,10 @@
             theh1c.innerHTML = "Degrees C: " + temperature;
             theh1f = document.querySelector("#outputf");
             theh1f.innerHTML = "Degrees F: " + (temperature*1.8+32);
+            if (theh1f>100) {
+              themessage=document.querySelector("#themessage");
+              message.innerHTML="TOO HOT";
+            }
         }
     </script>
 
