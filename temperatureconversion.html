@@ -23,17 +23,17 @@
             theh1f = document.querySelector("#outputf");
             theh1f.innerHTML = "Degrees F: " + (temperature*1.8+32);
             
-            if (theh1f>100) {
+            if (temperature>40) {
               themessage=document.querySelector("#themessage");
               themessage.innerHTML="TOO HOT";
               document.body.style.backgroundColor="red";
             }
-            if (theh1f<20) {
+            if (temperature<0) {
               themessage=document.querySelector("#themessage");
               themessage.innerHTML="TOO COLD";
               document.body.style.backgroundColor="aqua";
             }
-            if (theh1f>=20 && theh1f<=100) {
+            if (temperature>=0 && temperature<=40) {
               themessage=document.querySelector("#themessage");
               themessage.innerHTML="OK";
               document.body.style.backgroundColor="yello";
