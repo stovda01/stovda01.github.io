@@ -28,6 +28,7 @@
       <input type="text" id="phonenumberbox">
       
       <button onclick="add();">Add to Phonebook</button>
+    
       
       <h1>My Address Book</h1>
       <table id="table">
@@ -37,31 +38,23 @@
           <th>Email</th>
           <th>Phone Number</th>
         </tr>
-        <tr>
-          <td>Daniel</td>
-          <td>Stover</td>
-          <td>stovda01</td>
-          <td>712-330-2487</td>
-        </tr>
       </table>
         
     <script>
-  
-        add=function() {
+  add = function() {
             firstnamebox=document.querySelector("#firstnamebox").value;
             lastnamebox=document.querySelector("#lastnamebox").value;
             emailbox=document.querySelector("#emailbox").value;
             phonenumberbox=document.querySelector("#phonenumberbox").value;
-            thetable = document.querySelector("#table");
-            newitem1 = document.createElement("td");
-            newitem1.innerHTML=firstnamebox;
-            newitem2 = document.createElement("td");
-            newitem2.innerHTML=lastnamebox;
-            newitem3 = document.createElement("td");
-            newitem3.innerHTML=emailbox;
-            newitem4 = document.createElement("td");
-            newitem4.innerHTML=phonenumberbox;
-        }
+
+             t = document.querySelector("#table")
+             trow = document.createElement("tr")
+             td = document.createElement("td")
+             contents = document.createTextNode(firstnamebox)
+             td.appendChild(contents)
+             trow.appendChild(td)
+             t.appendChild(trow)
+          }
     </script>
         
 </body>
