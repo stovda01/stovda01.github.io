@@ -49,16 +49,14 @@
 
              t = document.querySelector("#table")
              trow = document.createElement("tr")
-             td = document.createElement("td")
+             td1 = document.createElement("td")
              contents1 = document.createTextNode(firstnamebox)
+             td1.appendChild(contents1)
+             trow.appendChild(td1)
+            td2 = document.createElement("td")
              contents2 = document.createTextNode(lastnamebox)
-             contents3 = document.createTextNode(emailbox)
-             contents4 = document.createTextNode(phonenumberbox)
-             td.appendChild(contents1)
-             td.appendChild(contents2)
-             td.appendChild(contents3)
-             td.appendChild(contents4)
-             trow.appendChild(td)
+             td2.appendChild(contents2)
+             trow.appendChild(td2)
              t.appendChild(trow)
              
              
