@@ -1,6 +1,21 @@
 <html>
 <head>
   <title>Address Book</title>
+  <style>
+    table {
+      width: 100%;
+      border-style: dotted;
+      cellspacing: 1;
+      font-family: fantasy;
+      border-color: blue;
+    }
+    td {
+      text-align: center;
+      border-style: solid;
+      cellspacing: 1;
+    }
+      
+    </style>
 </head>
 <body>
       <label>First Name</label>
@@ -12,7 +27,7 @@
       <label>Phone Number</label>
       <input type="text" id="phonenumberbox">
       
-      <button onclick="increment();">Add to Phonebook</button>
+      <button onclick="add();">Add to Phonebook</button>
       
       <h1>My Address Book</h1>
       <table id="table">
@@ -22,17 +37,22 @@
           <th>Email</th>
           <th>Phone Number</th>
         </tr>
+        <tr>
+          <td>Daniel</td>
+          <td>Stover</td>
+          <td>stovda01</td>
+          <td>712-330-2487</td>
+        </tr>
       </table>
         
     <script>
   
-        increment=function() {
+        add=function() {
             firstnamebox=document.querySelector("#firstnamebox").value;
             lastnamebox=document.querySelector("#lastnamebox").value;
             emailbox=document.querySelector("#emailbox").value;
             phonenumberbox=document.querySelector("#phonenumberbox").value;
             thetable = document.querySelector("#table");
-            newitema = document.createElement("tr");
             newitem1 = document.createElement("td");
             newitem1.innerHTML=firstnamebox;
             newitem2 = document.createElement("td");
