@@ -31,6 +31,7 @@
             emailbox=document.querySelector("#emailbox").value;
             phonenumberbox=document.querySelector("#phonenumberbox").value;
             thetable = document.querySelector("#table");
+            newitema = document.createElement("tr");
             newitem1 = document.createElement("td");
             newitem1.innerHTML=firstnamebox;
             newitem2 = document.createElement("td");
@@ -39,11 +40,6 @@
             newitem3.innerHTML=emailbox;
             newitem4 = document.createElement("td");
             newitem4.innerHTML=phonenumberbox;
-
-            firstnamebox.value="";
-            lastnamebox.value="";
-            emailbox.value="";
-            phonenumberbox.value="";
         }
     </script>
         
