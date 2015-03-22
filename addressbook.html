@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title>Address Book</title>
+</head>
+<body>
+      <label>First Name</label>
+      <input type="text" id="firstnamebox">
+      <label>Last Name</label>
+      <input type="text" id="lastnamebox">
+      <label>Email</label>
+      <input type="text" id="emailbox">
+      <label>Phone Number</label>
+      <input type="text" id="phonenumberbox>
+      
+      <button onclick="increment();">Add</button>
+      <h1>My Address Book</h1>
+      <table id="table">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+        </tr>
+      </table>
+        
+    <script>
+  
+        increment=function() {
+            firstnamebox=document.querySelector("#firstnamebox").value;
+            lastnamebox=document.querySelector("#lastnamebox").value;
+            emailbox=document.querySelector("#emailbox").value;
+            phonenumberbox=document.querySelector("#phonenumberbox").value;
+            thetable = document.querySelector("#table");
+            newitem1 = document.createElement("td");
+            newitem1.innerHTML=firstnamebox;
+            newitem2 = document.createElement("td");
+            newitem2.innerHTML=lastnamebox;
+            newitem3 = document.createElement("td");
+            newitem3.innerHTML=emailbox;
+            newitem4 = document.createElement("td");
+            newitem4.innerHTML=phonenumberbox;
+
+            firstnamebox.value="";
+            lastnamebox.value="";
+            emailbox.value="";
+            phonenumberbox.value="";
+        }
+    </script>
+        
+</body>
+</html>
+
