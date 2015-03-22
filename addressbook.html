@@ -50,10 +50,18 @@
              t = document.querySelector("#table")
              trow = document.createElement("tr")
              td = document.createElement("td")
-             contents = document.createTextNode(firstnamebox)
-             td.appendChild(contents)
+             contents1 = document.createTextNode(firstnamebox)
+             contents2 = document.createTextNode(lastnamebox)
+             contents3 = document.createTextNode(emailbox)
+             contents4 = document.createTextNode(phonenumberbox)
+             td.appendChild(contents1)
+             td.appendChild(contents2)
+             td.appendChild(contents3)
+             td.appendChild(contents4)
              trow.appendChild(td)
              t.appendChild(trow)
+             
+             
           }
     </script>
         
