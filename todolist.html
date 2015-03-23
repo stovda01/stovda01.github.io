@@ -1,0 +1,62 @@
+<html>
+<head>
+    <style>
+    li{
+        list-style-type: none;
+        font-family: fantasy;
+        font-size: 24px;
+    }
+    h1 {
+    }
+        
+    .makered {
+        color: red;
+        text-decoration: line-through;
+    }
+        
+    </style>
+    
+</head>    
+<body>
+    <label>Item</label>
+      <input type="text" id="itembox">
+    <button onclick="addtodo()">Add item</button>
+   <button onclick="clear()">Clear List</button>
+   <h1>TO DO LIST:</h1>
+    <ul id="out">
+    </ul>
+    
+    <script>
+        var count = 0;
+        
+        addtodo = function() {
+            todo = document.querySelector("#itembox").value;
+            output = document.querySelector("#out");
+            newli = document.createElement("li");
+            
+            cb = document.createElement("input");
+            cb.type="checkbox";
+            newli.appendChild(cb);
+            te = document.createTextNode(todo);
+            newli.appendChild(te);
+            
+            cb.onclick=select;
+            
+            out.appendChild(newli);
+        }
+        
+        select = function() {
+            if (this.checked)
+               this.parentNode.classList.add("makered");
+            else
+               this.parentNode.classList.remove("makered");
+        }
+        
+        clear = function() {
+          out = document.querySelector("#out").value;
+          out.innerHTML="";
+        }
+    </script>
+    
+</body>
+</html>
