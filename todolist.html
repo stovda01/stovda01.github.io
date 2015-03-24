@@ -21,7 +21,7 @@
     <label>Item</label>
       <input type="text" id="itembox">
     <button onclick="addtodo()">Add item</button>
-    <button onclick="clear()">Clear List</button>
+    <button onclick="clearlist()">Clear List</button>
    <h1>TO DO LIST:</h1>
     <ul id="out">
     </ul>
@@ -52,9 +52,9 @@
                this.parentNode.classList.remove("makered");
         }
         
-         clear=function () {
-        todolist=document.querySelector("#out");
-        todolist.innerHTML=" "
+         clearlist=function () {
+        list=document.querySelector("#out");
+        list.innerHTML=" "
         }
     </script>
     
