@@ -9,10 +9,19 @@
     h1 {
     }
         
-    .makered {
-        color: red;
+    .checkedoff {
         text-decoration: line-through;
     }
+    
+    .High {
+                color:red;
+            }
+    .Medium {
+                color:blue;
+            }
+    .Low {
+                color:green;
+            }
         
     </style>
     
@@ -20,7 +29,13 @@
 <body>
     <label>Item</label>
       <input type="text" id="itembox">
+    <select id="colorchooser">
+        <option>High</option>
+        <option>Medium</option>
+        <option>Low</option>
+    </select>
     <button onclick="addtodo()">Add item</button>
+    
     <button onclick="clearlist()">Clear List</button>
    <h1>TO DO LIST:</h1>
     <ul id="out">
@@ -42,14 +57,21 @@
             
             cb.onclick=select;
             
+            colorpicker=document.querySelector("#colorchooser");
+            theindex=colorpicker.selectedIndex;
+            theoption=colorpicker.options[theindex];
+            thecolor=theoption.value;
+            
+            newli.classlist.add(thecolor);
+            
             out.appendChild(newli);
         }
         
         select = function() {
             if (this.checked)
-               this.parentNode.classList.add("makered");
+               this.parentNode.classList.add("checkedoff");
             else
-               this.parentNode.classList.remove("makered");
+               this.parentNode.classList.remove("checkedoff");
         }
         
          clearlist=function () {
