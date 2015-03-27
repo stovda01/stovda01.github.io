@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <style>
+            li{
+                list-style-type: none;
+                font-family: fantasy;
+                font-size: 24px;
+            }
+            
+            .checkedoff {  
+                text-decoration: line-through;
+            }
+            
+            .Red {
+                color:red;
+            }
+            
+            .Blue {
+                color:blue;
+            }
+            .Green {
+                color:green;
+            }
+        </style>
+    </head>
+<body>
+    <select id="colorchooser">
+        <option>High</option>
+        <option>Medium</option>
+        <option>Low</option>
+    </select>
+    <button onclick="increment()">Click Me</button>
+    <ul id="out">
+    </ul>
+    <script>
+        var count = 0;
+        
+        increment = function() {
+            count = count + 1;
+            output = document.querySelector("#out");
+            newli = document.createElement("li");
+            cb = document.createElement("input");
+            cb.type="checkbox";
+            newli.appendChild(cb);
+            te = document.createTextNode(count);
+            newli.appendChild(te);
+            
+            cb.onclick=select;
+            
+            colorpicker=document.querySelector("#colorchooser");
+            theindex=colorpicker.selectedIndex;
+            theoption=colorpicker.options[theindex];
+            thecolor=theoption.value;
+            
+            newli.classList.add(thecolor);
+            
+            out.appendChild(newli);          
+        }
+        
+        select = function() {
+            if (this.checked)                
+                this.parentNode.classList.add("checkedoff");
+            else
+                this.parentNode.classList.remove("checkedoff");
+        }
+    </script>
+    </body>    
+
+
+</html>
