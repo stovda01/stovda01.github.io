@@ -36,19 +36,20 @@
       <input type="text" id="itembox">
     
     <button onclick="addtodo()">Add item</button>
-    
+    <ul id="out">
+    </ul>
     
     <button onclick="clearlist()">Clear List</button>
    <h1>TO DO LIST:</h1>
-    <ul id="out">
-    </ul>
+    
     
     <script>
         var count = 0;
         
         addtodo = function() {
+             output = document.querySelector("#out");
             todo = document.querySelector("#itembox").value;
-            output = document.querySelector("#out");
+           
             newli = document.createElement("li");
             
             cb = document.createElement("input");
@@ -64,7 +65,7 @@
             theoption=colorpicker.options[theindex];
             thecolor=theoption.value;
             
-            newli.classlist.add(thecolor);
+            newli.classList.add(thecolor);
             
             
         }
